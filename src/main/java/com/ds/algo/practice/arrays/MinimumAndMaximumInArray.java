@@ -2,7 +2,7 @@ package com.ds.algo.practice.arrays;
 
 import java.util.Scanner;
 
-public class MaximumInArray
+public class MinimumAndMaximumInArray
 {
 	public static void main(String[] args)
 	{
