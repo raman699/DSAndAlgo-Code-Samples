@@ -23,7 +23,6 @@ public class MinimumAndMaximumInArray
 					min = ar[j];
 			}
 			System.out.println(min + " " + max);
-
 		}
 		sc.close();
 	}

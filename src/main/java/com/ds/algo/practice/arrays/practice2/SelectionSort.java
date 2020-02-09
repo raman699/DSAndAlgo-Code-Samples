@@ -7,7 +7,7 @@ public class SelectionSort {
 	}
 
 	public static void selectionSort(int ar[]) {
-		for (int i = 0; i < ar.length; i++) {
+		for (int i = 0; i < ar.length-1; i++) {
 			for (int j = i+1; j < ar.length; j++) {
 				if (ar[i] > ar[j]) {
 					int temp = ar[i];

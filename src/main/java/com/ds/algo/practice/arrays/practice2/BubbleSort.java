@@ -3,7 +3,7 @@ package com.ds.algo.practice.arrays.practice2;
 public class BubbleSort {
 
 	public static void main(String... s) {
-		int ar[] = { 6, 5, 4, 3, 2, 1 };
+		int ar[] = { 7,6, 5, 4, 3, 2, 1 };
 		bubbleSort(ar);
 	}
 
