@@ -1,4 +1,4 @@
-package com.ds.algo.practice.arrays;
+package kadanes;
 
 import java.io.BufferedReader;
 import java.io.IOException;

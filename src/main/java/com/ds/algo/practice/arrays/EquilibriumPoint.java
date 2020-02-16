@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Kadanes {
+public class EquilibriumPoint {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -18,24 +18,25 @@ public class Kadanes {
 			for (int j = 0; j < number_of_elements; j++) {
 				ar[j] = Integer.parseInt(strs[j]);
 			}
-			System.out.println(maxSubArraySum(ar));
+			System.out.println(fetchEquilibriumPoint(ar));
 		}
 	}
 
-	public static int maxSubArraySum(int ar[]) {
-		int currentSum = ar[0];
-		int overallSum = ar[0];
+	private static int fetchEquilibriumPoint(int ar[]) {
+		int sum = 0;
+		for (int i : ar)
+			sum += i;
 
-		for (int i = 1; i < ar.length; i++) {
-			if (ar[i] + currentSum > ar[i]) {
-				currentSum = ar[i] + currentSum;
-			} else {
-				currentSum = ar[i];
+		int rightSum = sum;
+		int leftSum = 0;
+		for (int i = 0; i < ar.length; i++) {
+			rightSum -= ar[i];
+
+			if (rightSum == leftSum) {
+				return i+1;
 			}
-			if (currentSum > overallSum) {
-				overallSum = currentSum;
-			}
+			leftSum += ar[i];
 		}
-		return overallSum;
+		return -1;
 	}
 }

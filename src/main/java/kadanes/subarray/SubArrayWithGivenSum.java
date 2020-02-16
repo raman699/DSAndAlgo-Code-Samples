@@ -1,4 +1,4 @@
-package com.ds.algo.practice.arrays;
+package kadanes.subarray;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -30,6 +30,10 @@ public class SubArrayWithGivenSum {
 		int currentSum = ar[0];
 		int startIndex = 0;
 		int endIndex = 0;
+		if(currentSum==givenSum)
+		{
+			System.out.println(startIndex + 1 + " " + (endIndex + 1));
+		}
 		for (int i = 1; i < ar.length; i++) {
 			if (currentSum + ar[i] == givenSum) {
 				endIndex = i;
@@ -53,3 +57,8 @@ public class SubArrayWithGivenSum {
 		System.out.println(-1);
 	}
 }
+
+//output
+//1
+//17 415
+//186 76 66 87 231 227 193 217 230 170 253 210 167 116 196 34 29

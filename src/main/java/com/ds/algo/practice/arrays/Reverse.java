@@ -20,7 +20,7 @@ public class Reverse {
 
 	public static void reverse(int ar[]) {
 		int beg = 0, end = ar.length - 1;
-		while (beg <= end) {
+		while (beg < end) {
 			int k = ar[beg];
 			ar[beg] = ar[end];
 			ar[end] = k;

@@ -23,4 +23,22 @@ public class InsertionSort {
 		for(int i:ar)
 			System.out.print(i+" ");
 	}
+	
+	public static void insertionSort2(int ar[])
+	{
+		for(int i=0;i<ar.length-1;i++)
+		{
+			for(int j=i+1;j>0;j--)
+			{
+				if(ar[j]<ar[j-1])
+				{
+					int temp=ar[j];
+					ar[j]=ar[j-1];
+					ar[j-1]=temp;
+				}
+			}
+		}
+		for(int i:ar)
+			System.out.print(i+" ");
+	}
 }
