@@ -1,4 +1,4 @@
-package com.ds.algo.practice.arrays;
+package searching;
 
 import java.util.Scanner;
 
