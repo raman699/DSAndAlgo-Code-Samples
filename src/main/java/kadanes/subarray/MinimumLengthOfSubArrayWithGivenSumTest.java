@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.TreeSet;
 
-public class MinimumLengthOfSubArrayWithGivenSum {
+public class MinimumLengthOfSubArrayWithGivenSumTest {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -32,9 +32,14 @@ public class MinimumLengthOfSubArrayWithGivenSum {
 		int startIndex = 0;
 		int endIndex = 0;
 		TreeSet<Integer> set = new TreeSet<>();
+		if (currentSum == givenSum) {
+			System.out.println(startIndex + 1 + " " + (endIndex + 1));
+			set.add(endIndex - startIndex + 1);
+		}
 		for (int i = 1; i < ar.length; i++) {
 			if (currentSum + ar[i] == givenSum) {
 				endIndex = i;
+				System.out.println(startIndex + " " + endIndex);
 				set.add(endIndex - startIndex + 1);
 			} else if (currentSum + ar[i] < givenSum) {
 				currentSum += ar[i];
@@ -45,6 +50,7 @@ public class MinimumLengthOfSubArrayWithGivenSum {
 				}
 				if (currentSum + ar[i] == givenSum) {
 					endIndex = i;
+					System.out.println(startIndex + " " + endIndex);
 					set.add(endIndex - startIndex + 1);
 				}
 				currentSum += ar[i];
